@@ -3,7 +3,7 @@
 ========================= */
 
 function initThemeToggle() {
-  const toggleButton = document.getElementById("themeToggle");
+  const toggleButton = document.getElementById("theme-toggle");
 
   if (!toggleButton) return;
 

@@ -97,7 +97,7 @@ textarea {
 
 
 /* Theme toggle button */
-.theme-toggle {
+#theme-toggle {
   background: none;
   border: none;
   color: white;
