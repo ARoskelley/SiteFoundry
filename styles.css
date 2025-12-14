@@ -92,7 +92,7 @@ textarea {
 
 .nav-links a.active,
 .nav-links a:hover {
-  color: var(--accent);
+  color: #e5e7eb;
 }
 
 
@@ -169,13 +169,13 @@ textarea {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--light);
   color: var(--primary);
 }
 
 .btn-secondary {
-  border: 2px solid var(--accent);
-  color: var(--accent);
+  border: 2px solid var(--dark);
+  color: var(--dark);
 }
 
 
