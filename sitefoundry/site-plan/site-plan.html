@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Site Foundry – Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="site-plan.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Site Foundry – Site Plan</h1>
+      <h2>Aiden Roskelley</h2>
+      <h2>WDD 131-[section]</h2>
+    </header>
+
+    <main>
+      <hr />
+      <h2>Overview</h2>
+
+      <!-- PURPOSE -->
+      <h3>Purpose</h3>
+      <p>
+        Site Foundry exists to help small businesses, creators, and entrepreneurs
+        build clean, modern websites that communicate their message clearly and
+        strengthen their online presence. The site will showcase my design
+        services, highlight examples of past work, and guide visitors toward
+        scheduling a consultation.
+      </p>
+
+      <!-- AUDIENCE -->
+      <h3>Audience</h3>
+      <p>
+        My audience includes local businesses, students, and individuals who need
+        a simple, effective website but may not have the skills or time to build
+        one. They value clarity, affordability, and professional presentation.
+      </p>
+
+      <!-- DYNAMIC ELEMENTS -->
+      <h3>Dynamic elements</h3>
+      <p>
+        The site will include multiple JavaScript-based dynamic elements:
+        <ul>
+          <li>
+            A <strong>theme switcher</strong> (light/dark mode) that uses DOM
+            manipulation, an event listener, and conditional logic to toggle
+            appearance and store the user's preference in localStorage.
+          </li>
+          <li>
+            A <strong>portfolio filter</strong> that uses an array of objects
+            representing projects and filters them with array methods such as
+            <em>filter</em> and <em>map</em>, dynamically generating project
+            cards on the page.
+          </li>
+          <li>
+            A <strong>testimonial rotator</strong> that cycles through an array
+            of testimonials, replacing content at timed intervals.
+          </li>
+          <li>
+            A <strong>mobile navigation toggle</strong> that listens for click
+            events and adds/removes classes to display or hide the menu.
+          </li>
+        </ul>
+      </p>
+
+      <hr />
+
+      <!-- BRANDING -->
+      <h2>Branding</h2>
+      <h3>Website Logo</h3>
+      <img src="images/siteFoundryLogoLg.png" alt="Site Foundry Logo" class="logo"/>
+      <img src="images/siteFoundryLogoMed.png" alt="Site Foundry Logo" class="logo"/>
+      <img src="images/siteFoundryLogoSm.png" alt="Site Foundry Logo" class="logo"/>
+      <p>(I will add the final logo into the images folder.)</p>
+
+      <hr />
+      <h2>Style Guide</h2>
+
+      <!-- COLOR PALETTE -->
+      <h3>Color Palette</h3>
+      Palette URL:
+      <a
+        href="https://coolors.co/0b1e3d-3CF2FF-1F1F1F-C6C9D0-0099FF"
+        target="_blank"
+        >https://coolors.co0b1e3d-3CF2FF-1F1F1F-C6C9D0-0099FF</a
+      >
+
+      <table class="colors">
+        <tbody>
+          <tr>
+            <th>Primary</th>
+            <th>Secondary</th>
+            <th>Accent 1</th>
+            <th>Accent 2</th>
+          </tr>
+          <tr>
+            <td class="primary">#0B1E3D</td>
+            <td class="secondary">#1F1F1F</td>
+            <td class="accent1">#C6C9D0</td>
+            <td class="accent2">#0099FF</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- TYPOGRAPHY -->
+      <h3>Typography</h3>
+      <h4>Heading Font: Poppins</h4>
+      <h4>Paragraph Font: Inter (or Roboto)</h4>
+
+      <h3>Normal paragraph example</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+
+      <h3>Colored paragraph example</h3>
+      <p class="colored">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+
+      <!-- NAVIGATION -->
+      <h3 id = nav1 >Navigation</h3>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <hr />
+
+      <!-- CONTENT -->
+      <h2>Content</h2>
+
+      <h3>Home page</h3>
+      <p>
+        The home page will introduce Site Foundry and explain the value of
+        modern, clean web design. It will include a hero section, a short
+        overview of services, a call-to-action button, and preview cards for
+        portfolio items. Images will include a hero background graphic, icons
+        for the service list, and a thumbnail of a sample website project.
+      </p>
+
+      <h3>Portfolio Page</h3>
+      <p>
+        The portfolio page will display projects dynamically using JavaScript.
+        Projects will be stored as objects in an array and filtered using
+        category buttons (e.g., Landing Pages, Small Business, Personal Sites).
+        Each project card will include an image, description, and link to a live
+        example when applicable.
+      </p>
+
+      <h2>Wireframes</h2>
+      <p>Create two wireframes for your site. One for each page.</p>
+
+      <h3>Home</h3>
+      <p>
+        The home wireframe will include: hero text + CTA, services section,
+        portfolio preview, and a footer. The layout will remain responsive and
+        collapse into a single-column layout on smaller screens.
+      </p>
+      <img src="images/home-wireframe.png" alt="home page wireframe" />
+
+      <h3>Portfolio</h3>
+      <p>
+        The portfolio wireframe will show the filter buttons at the top, project
+        cards in a responsive grid, and optional testimonial or CTA section at
+        the bottom.
+      </p>
+      <img src="images/portfolio-wireframe.png" alt="portfolio page wireframe" />
+    </main>
+  </body>
+</html>
