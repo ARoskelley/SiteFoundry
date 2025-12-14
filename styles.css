@@ -130,7 +130,7 @@ textarea {
 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; /* 🔒 prevents tiling */
+  background-repeat: no-repeat;
   min-height: 80vh;
   position: relative;
 
