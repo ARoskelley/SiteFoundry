@@ -215,6 +215,12 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.cta-container h2,
+.cta-container p {
+  color: var(--dark);
+}
+
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -333,6 +339,11 @@ body.dark .cta-container {
 
 body.dark .contact-section {
   background-color: #1f2a44;
+}
+
+body.dark .cta-container h2,
+body.dark .cta-container p {
+  color: #e5e7eb;
 }
 
 /* CONTACT FORM */
