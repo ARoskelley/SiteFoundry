@@ -3,88 +3,245 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Contact Site Foundry to start your website project."
-  />
-  <title>Contact | Site Foundry</title>
+  <meta name="description" content="Contact SiteFoundry to start your website project. Serving students and small businesses in Rexburg, Idaho." />
+  <title>Contact | SiteFoundry</title>
 
   <link rel="stylesheet" href="styles.css" />
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap"
-    />
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header" role="banner">
     <nav class="nav" role="navigation" aria-label="Primary">
       <div class="brand">
-        <h1>SiteFoundry</h1>
-        <img
-          src="images/logoMedWhite.png"
-          alt="Site Foundry logo"
-          class="logo"
-        />
+        <img src="images/logoMedWhite.png" alt="SiteFoundry" class="logo" />
+        <span class="brand-text">SITEFOUNDRY</span>
       </div>
 
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
-        <button id="theme-toggle" class ="ThemeToggle" aria-label="Toggle dark mode">🌙</button>
       </ul>
-      
     </nav>
   </header>
 
-  <main class="contact-main" role="main">
+  <main class="contact-page" role="main">
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Let's Build Something Great</h1>
+        <p>Tell me about your project and I'll get back to you within 24 hours.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
     <section class="contact-section">
-      <h1>Contact Site Foundry</h1>
-      <p>
-        Tell me a bit about your project and I’ll get back to you as soon as
-        possible.
-      </p>
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>
+              Whether you're showcasing your work, launching a business, or making a career change, I'm here to help build your web presence.
+            </p>
+            
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="detail-icon">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <p>Remote-friendly, based in Idaho</p>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <span class="detail-icon">⏱️</span>
+                <div>
+                  <strong>Response Time</strong>
+                  <p>Within 24 hours</p>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <span class="detail-icon">💬</span>
+                <div>
+                  <strong>What to Include</strong>
+                  <p>Project type, timeline, budget range</p>
+                </div>
+              </div>
+            </div>
 
-      <form
-        class="contact-form"
-        action="https://formspree.io/f/xwpgzeoj"
-        method="POST"
-      >
-        <label>
-          Name
-          <input type="text" name="name" required />
-        </label>
+            <div class="contact-note">
+              <strong>First-time website owner?</strong> Mention code <span class="highlight-code">FIRST20</span> for 20% off portfolio packages.
+            </div>
+          </div>
 
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
+          <div class="contact-form-wrapper">
+            <form class="contact-form" action="https://formspree.io/f/xwpgzeoj" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
 
-        <label>
-          Project Details
-          <textarea name="message" rows="5" required></textarea>
-        </label>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
 
-        <button type="submit" class="btn-primary">
-          Send Message
-        </button>
-      </form>
+              <div class="form-group">
+                <label for="service">What are you looking for?</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service...</option>
+                  <optgroup label="Portfolio & Resume Sites">
+                    <option value="basic-portfolio">Basic Portfolio ($150)</option>
+                    <option value="enhanced-portfolio">Enhanced Portfolio ($250)</option>
+                    <option value="premium-portfolio">Premium Portfolio ($400)</option>
+                  </optgroup>
+                  <optgroup label="Business Websites">
+                    <option value="landing-page">Landing Page ($500)</option>
+                    <option value="multi-page">Multi-Page Site ($1,000-$2,000)</option>
+                    <option value="ecommerce">E-Commerce (Starting at $1,500)</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="maintenance">Website Maintenance</option>
+                    <option value="addon">Add-on Services</option>
+                    <option value="other">Other / Not Sure</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">When do you need it?</label>
+                <select id="timeline" name="timeline" required>
+                  <option value="">Select timeline...</option>
+                  <option value="asap">As soon as possible</option>
+                  <option value="1-2weeks">1-2 weeks</option>
+                  <option value="2-4weeks">2-4 weeks</option>
+                  <option value="flexible">Flexible / No rush</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell me about your project</label>
+                <textarea id="message" name="message" rows="6" required placeholder="What's your vision? What problem are you trying to solve? Any specific features you need?"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Budget Range (Optional)</label>
+                <input type="text" id="budget" name="budget" placeholder="e.g., $200-300 or 'flexible'" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT HAPPENS NEXT -->
+    <section class="next-steps">
+      <div class="container">
+        <h2 class="section-title">What Happens Next?</h2>
+        
+        <div class="steps-timeline">
+          <div class="timeline-step">
+            <div class="step-marker">1</div>
+            <div class="step-content">
+              <h3>I'll Review Your Request</h3>
+              <p>Within 24 hours, you'll get a response with follow-up questions and timeline estimate.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-marker">2</div>
+            <div class="step-content">
+              <h3>We'll Finalize Details</h3>
+              <p>Quick call or email exchange to nail down exactly what you need and confirm pricing.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-marker">3</div>
+            <div class="step-content">
+              <h3>I'll Get to Work</h3>
+              <p>50% deposit to start, then I'll build your site. You'll get progress updates along the way.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-marker">4</div>
+            <div class="step-content">
+              <h3>Launch & Deliver</h3>
+              <p>Final review, any needed tweaks, then I'll deploy your site and hand over access.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ QUICK -->
+    <section class="contact-faq">
+      <div class="container">
+        <h2 class="section-title">Quick Questions</h2>
+        
+        <div class="faq-quick">
+          <div class="faq-quick-item">
+            <strong>Do you offer free consultations?</strong>
+            <p>Yes - the initial discussion is always free. No commitment until we agree on scope and price.</p>
+          </div>
+
+          <div class="faq-quick-item">
+            <strong>Can you work with my budget?</strong>
+            <p>Maybe! I try to be flexible and can often find creative solutions. Just be upfront about your budget constraints.</p>
+          </div>
+
+          <div class="faq-quick-item">
+            <strong>Do you take rush projects?</strong>
+            <p>Sometimes. Rush delivery (under 48 hours) is available for an additional 50% fee, subject to availability.</p>
+          </div>
+        </div>
+
+        <a href="services.html" class="btn btn-secondary">View Full FAQ</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <p>&copy; 2025 Site Foundry. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/logoMedWhite.png" alt="SiteFoundry" class="footer-logo" />
+          <p>Forging professional websites at fair prices. Helping people launch careers and grow businesses.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html#student">Portfolio Sites</a></li>
+              <li><a href="services.html#business">Business Sites</a></li>
+              <li><a href="services.html#addons">Add-ons</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 SiteFoundry. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="main.js"></script>

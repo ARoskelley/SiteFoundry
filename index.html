@@ -1,102 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Site Foundry builds clean, modern, high-performance websites for small businesses and creators." />
-    <title>Site Foundry | Crafted Websites</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SiteFoundry - Affordable, professional websites for students and small businesses in Rexburg, Idaho." />
+  <title>SiteFoundry | Forged Websites for Students & Businesses</title>
 
-    <link rel="stylesheet" href="styles.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" />
-    </noscript>
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Distinctive Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="site-header" role="banner">
-        <nav class="nav" role="navigation" aria-label="Primary">
-            <div class="brand">
-                <h1>SiteFoundry</h1>
-                <img src="images/logoMedWhite.png" alt="Site Foundry logo" class="logo" />
-            </div>
+  <!-- NAVIGATION -->
+  <header class="site-header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img src="images/logoMedWhite.png" alt="SiteFoundry" class="logo" />
+        <span class="brand-text">SITEFOUNDRY</span>
+      </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <button id="theme-toggle" class="ThemeToggle" aria-label="Toggle dark mode">🌙</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title-line">Websites</span>
+        <span class="hero-title-line">Forged for</span>
+        <span class="hero-title-line hero-title-accent">Your Success</span>
+      </h1>
+      <p class="hero-subtitle">Professional web solutions at fair prices. Whether you're launching your career, growing your business, or making a change — get a site that works.</p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+        <a href="contact.html" class="btn btn-secondary">Get Started</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to discover</span>
+      <div class="scroll-indicator"></div>
+    </div>
+  </section>
+
+  <!-- TWO-TRACK SERVICES -->
+  <main role="main">
+    <section id="services" class="dual-services">
+      <div class="container">
+        <h2 class="section-title">Built for You</h2>
+        
+        <div class="service-tracks">
+          <!-- STUDENT TRACK -->
+          <article class="track track-student">
+            <div class="track-header">
+              <div class="track-icon">🎓</div>
+              <h3>Portfolio & Resume Sites</h3>
+            </div>
+            <p class="track-description">
+              Stand out in the job market with a professional portfolio site. Perfect for students, career changers, or anyone showcasing their skills and experience.
+            </p>
+            <div class="track-features">
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Modern resume format</span>
+              </div>
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Project showcase</span>
+              </div>
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Mobile responsive</span>
+              </div>
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Fast deployment</span>
+              </div>
+            </div>
+            <div class="track-pricing">
+              <span class="price-label">Starting at</span>
+              <span class="price-amount">$150</span>
+            </div>
+            <a href="services.html#student" class="btn btn-track">View Details</a>
+          </article>
+
+          <!-- BUSINESS TRACK -->
+          <article class="track track-business">
+            <div class="track-header">
+              <div class="track-icon">🏢</div>
+              <h3>Business Websites</h3>
+            </div>
+            <p class="track-description">
+              Build your online presence with a professional website that attracts customers and establishes credibility. For businesses of any size.
+            </p>
+            <div class="track-features">
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Custom design</span>
+              </div>
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Google Maps integration</span>
+              </div>
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>Contact forms</span>
+              </div>
+              <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>SEO optimization</span>
+              </div>
+            </div>
+            <div class="track-pricing">
+              <span class="price-label">Starting at</span>
+              <span class="price-amount">$500</span>
+            </div>
+            <a href="services.html#business" class="btn btn-track">View Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMPLATE SHOWCASE -->
+    <section class="templates">
+      <div class="container">
+        <h2 class="section-title">Template Examples</h2>
+        <p class="section-subtitle">Preview the quality and style of sites we create</p>
+        
+        <div class="template-grid">
+          <article class="template-card">
+            <div class="template-preview">
+              <div class="template-mockup template-modern">
+                <div class="mockup-header"></div>
+                <div class="mockup-content">
+                  <div class="mockup-text"></div>
+                  <div class="mockup-text short"></div>
+                  <div class="mockup-image"></div>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <h3>Modern Professional</h3>
+              <p>Clean, contemporary design with bold typography and smooth animations.</p>
+              <span class="template-tag">Portfolio Sites</span>
+            </div>
+          </article>
+
+          <article class="template-card">
+            <div class="template-preview">
+              <div class="template-mockup template-minimal">
+                <div class="mockup-header"></div>
+                <div class="mockup-content">
+                  <div class="mockup-text"></div>
+                  <div class="mockup-text"></div>
+                  <div class="mockup-text short"></div>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <h3>Elegant Minimal</h3>
+              <p>Refined simplicity with sophisticated spacing and subtle elegance.</p>
+              <span class="template-tag">Business Sites</span>
+            </div>
+          </article>
+
+          <article class="template-card">
+            <div class="template-preview">
+              <div class="template-mockup template-bold">
+                <div class="mockup-header"></div>
+                <div class="mockup-content">
+                  <div class="mockup-image"></div>
+                  <div class="mockup-text"></div>
+                  <div class="mockup-text short"></div>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <h3>Bold & Dynamic</h3>
+              <p>High-impact design with strong visuals and commanding presence.</p>
+              <span class="template-tag">All Types</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="process">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Choose Your Path</h3>
+            <p>Select between student portfolio or business website services based on your needs.</p>
+          </div>
+          
+          <div class="step-connector"></div>
+          
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Share Your Vision</h3>
+            <p>Tell me about your project, goals, and preferences through our simple contact form.</p>
+          </div>
+          
+          <div class="step-connector"></div>
+          
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Launch Your Site</h3>
+            <p>Receive your professional website, ready to deploy and make an impact online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Build Your Web Presence?</h2>
+          <p>Let's forge something great together. Professional websites at prices that make sense for real people.</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-primary btn-large">Start Your Project</a>
+            <a href="services.html" class="btn btn-secondary btn-large">View All Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/logoMedWhite.png" alt="SiteFoundry" class="footer-logo" />
+          <p>Forging professional websites at fair prices. Helping people launch careers and grow businesses.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html#student">Portfolio Sites</a></li>
+              <li><a href="services.html#business">Business Sites</a></li>
+              <li><a href="services.html#addons">Add-ons</a></li>
             </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 SiteFoundry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-        </nav>
-
-        <section class="hero hero-image">
-            <div class="hero-content">
-                <h1>Crafted Websites for Growing Brands</h1>
-                <p>
-                    Clean, modern, responsive websites built with intention, clarity,
-                    and performance.
-                </p>
-                <a href="contact.html" class="btn-primary">Start a Project</a>
-            </div>
-        </section>
-    </header>
-
-    <main role="main">
-        <section class="services">
-            <h2>What I Do</h2>
-
-            <div class="service-grid">
-                <article class="service-card">
-                    <h3>Custom Websites</h3>
-                    <p>
-                        Hand-crafted websites designed specifically for your brand,
-                        goals, and audience.
-                    </p>
-                </article>
-
-                <article class="service-card">
-                    <h3>Responsive Design</h3>
-                    <p>
-                        Your site will look great and function smoothly on phones,
-                        tablets, and desktops.
-                    </p>
-                </article>
-
-                <article class="service-card">
-                    <h3>Performance Focused</h3>
-                    <p>
-                        Fast load times, clean code, and modern best practices for
-                        excellent Lighthouse scores.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="cta-container">
-                <h2>Let’s Build Something Solid</h2>
-                <p>
-                    Whether you need a new site or a redesign, Site Foundry is ready
-                    to help bring it to life.
-                </p>
-                <a href="contact.html" class="btn-secondary">Get in Touch</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-        <p>&copy; 2025 Site Foundry. All rights reserved.</p>
-    </footer>
-
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
-
 </html>
