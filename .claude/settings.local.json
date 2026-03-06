@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import PIL; print\\(''Pillow OK''\\)\")",
+      "Bash(node --version)",
+      "Bash(python -c \"from PIL import Image; img = Image.open\\(''c:/Users/aiden/OneDrive/Desktop/SiteFoundry/images/logoMedWhite.png''\\); print\\(img.size, img.mode\\)\")"
+    ]
+  }
+}
