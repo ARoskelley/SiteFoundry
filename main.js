@@ -76,7 +76,7 @@ function initContactForm() {
   // Pre-populate service field from URL parameter
   const urlParams = new URLSearchParams(window.location.search);
   const serviceParam = urlParams.get("service");
-  
+
   if (serviceParam) {
     const serviceSelect = form.querySelector("#service");
     if (serviceSelect) {
@@ -84,15 +84,42 @@ function initContactForm() {
     }
   }
 
-  // Add submit handler
+  // AJAX submit handler — keep user on site
   form.addEventListener("submit", function(e) {
-    // Let Formspree handle the actual submission
-    // Just add visual feedback
+    e.preventDefault();
+
     const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
       submitButton.textContent = "Sending...";
       submitButton.disabled = true;
     }
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.innerHTML = `
+          <div class="form-success">
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+          </div>
+        `;
+      } else {
+        throw new Error("Form submission failed");
+      }
+    })
+    .catch(() => {
+      if (submitButton) {
+        submitButton.textContent = "Send Message";
+        submitButton.disabled = false;
+      }
+      alert("Something went wrong. Please try again or email ARoskelley2112@gmail.com directly.");
+    });
   });
 }
 
@@ -316,10 +343,65 @@ function initServiceTrackInteractions() {
 }
 
 /* =========================
+   MOBILE NAVIGATION TOGGLE
+========================= */
+
+function initMobileNav() {
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (!toggle || !navLinks) return;
+
+  // Create overlay element
+  const overlay = document.createElement("div");
+  overlay.classList.add("nav-overlay");
+  document.body.appendChild(overlay);
+
+  function openMenu() {
+    toggle.classList.add("active");
+    toggle.setAttribute("aria-expanded", "true");
+    navLinks.classList.add("open");
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    toggle.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+    navLinks.classList.remove("open");
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  toggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.contains("open");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  // Close menu when a nav link is clicked
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navLinks.classList.contains("open")) {
+      closeMenu();
+    }
+  });
+}
+
+/* =========================
    INITIALIZE ALL
 ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initMobileNav();
   initSmoothScroll();
   initScrollAnimations();
   initContactForm();
@@ -330,7 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTemplateMockups();
   initFormValidation();
   initServiceTrackInteractions();
-  
+
   console.log("✓ SiteFoundry initialized");
 });
 
